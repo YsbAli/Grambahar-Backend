@@ -8,11 +8,13 @@ const port = process.env.PORT
 const ConnectDB = require('./configs/db')
 
 const { UserController } = require('./Controllers/Main.exportsAll')
+const { ProductController}  = require('./Controllers/Main.exportsAll')
 
 app.use(express.json())                                      // it will read the  request and convert req.body into json objects
 
 // use the controllers
 app.use("/users", UserController)
+app.use("/products", ProductController)
 
 
 app.listen(port, () => {
