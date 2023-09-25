@@ -34,6 +34,19 @@ const GetOne = (model) => async (req, resp) => {
     }
 }
 
+//findby name
+const GetByName = (model) => async (req, resp) => {
+    try {
+        const items = await model.findById(req.params.first_name).lean().exec()
+
+        return resp.send(items)
+
+    }
+    catch (e) {
+        return resp.status(500).send(e.message)
+    }
+}
+
 
 const updateOne = (model) => async (req, resp) => {
     try {
@@ -43,7 +56,7 @@ const updateOne = (model) => async (req, resp) => {
 
         return resp.send(item);
     } catch (err) {
-        return res.status(500).send(err.message);
+        return resp.status(500).send(err.message);
     }
 };
 
@@ -64,6 +77,7 @@ module.exports = (model) => {
     return {
         post: post(model),
         GetAll: GetAll(model),
+        GetByName: GetByName(model),
         GetOne: GetOne(model),
         updateOne: updateOne(model),
         deleteOne: deleteOne(model)

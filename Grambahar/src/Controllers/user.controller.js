@@ -11,6 +11,7 @@ router.post('/', CrudController(User).post)
 
 //getall
 router.get('/', CrudController(User).GetAll)
+router.get('/', CrudController(User).GetByName)
 
 //getOne
 router.get('/:id', CrudController(User).GetOne)
