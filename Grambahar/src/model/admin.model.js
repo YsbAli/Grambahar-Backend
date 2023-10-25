@@ -16,7 +16,7 @@ const UserSchema = new mongoose.Schema({
     }
 )
 
-//Hasging Password
+//Hashing Password
 UserSchema.pre('save', function (next) {
 
     if (!this.isModified("password")) return next()
@@ -29,7 +29,6 @@ UserSchema.pre('save', function (next) {
 })
 
 //password authentication or password cheching
-
 UserSchema.methods.CheckPassword = function (password) {
     return bcrypt.compareSync(password, this.password)
 

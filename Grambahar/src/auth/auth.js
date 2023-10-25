@@ -19,7 +19,7 @@ const Register = async (req, resp) => {
         if (user) {
             return resp.status(400).send({ message: "Email is Already Exists" })
         }
-        
+
         user = await User.create(req.body)
 
         const token = NewToken(user)
@@ -59,14 +59,6 @@ const Login = async (req, resp) => {
 }
 
 module.exports = { Register, Login }
-
-
-
-
-
-
-
-
 
 
 
