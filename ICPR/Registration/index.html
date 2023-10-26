@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICPR Tickets</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>27Th International Conference on Pattern Recognition Dec 2024</h1>
+      <p>Date: 01-05 Dec 2024</p>
+      <p>Venue: Biswabangla swaroni</p>
+    </header>
+    <div class="container">
+      <h2>Select Registration Fee :-</h2>
+      <div class="feeContainer">
+        <label class="label" for="ticketType">Ticket Type: </label>
+        <select id="ticketType" onchange="updateSelect2Options()">
+          <option value="default">Select an option</option>
+          <option value="IAPR">IAPR Member</option>
+          <option value="General">General</option>
+          <option value="Student">Student(including Gala Dinner)</option>
+          <option value="non Student">Tutorial fees for non student</option>
+          <option value="Tutorial fees Student">Tutorial fees for student</option>
+          <option value="Workshop">Workshop fees for non student</option>
+          <option value="workshopStudent">Workshop fees for student</option>
+        </select>
+
+        <label class="label" for="fee">Fee</label>
+        <select id="fee"></select>
+      </div>
+      <div>
+        <p>Quantity:</p>
+        <input type="number" id="quantity" min="1" value="1" />
+      </div>
+      <section class="galaDinnerSection">
+        <h3>Add Gala Dinner worth $100</h3>
+        <p>Quantity:</p>
+        <input id="galaDinner" type="number" min="0" value="0" />
+      </section>
+
+      <section class="totalPrice">
+        <h2>Total Price:</h2>
+        <p id="totalPrice">$00</p>
+      </section>
+      <button id="purchaseButton">Purchase</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+<!-- 
+ <div>
+    <label class="lbl" for="">Category</label>
+        <select id="ticketType" required>
+           <option value="default" >Select ticket type</option>
+            <option value="IAPR">IAPR Member - $700</option>
+            <option value="vip">General - $760</option>
+            <option value="premium">Student(including Gala Dinner) - $450</option>
+           <option value="premium">Tutorial fees - $450</option>
+           <option value="premium">Tutorial fees for non student - $100</option>
+           <option value="premium">Workshop fees for non student - $75</option>
+          <option value="premium">Workshop fees for student - $75</option>
+        </select>
+    </div>
+    <div>
+        <label for="fee">Fee</label>
+        <select name="" id="">
+
+        </select>
+    </div> 
