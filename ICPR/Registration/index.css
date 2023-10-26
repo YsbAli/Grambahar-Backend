@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #007fd3;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+.text {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+select,
+input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.feeContainer {
+  margin-top: 1rem;
+}
+
+.galaDinnerSection {
+  margin-top: 1rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+#galaDinner,
+#quantity {
+  width: 10%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.TotalPrice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+#totalPrice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#purchaseButton {
+  background-color: #007fd3;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+}
+
+#purchaseButton:hover {
+  background-color: #0e6ba8;
+}

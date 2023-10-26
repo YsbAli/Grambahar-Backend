@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ICPR Tickets</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
     <header>
-      <h1>27Th International Conference on Pattern Recognition Dec 2024</h1>
-      <p>Date: 01-05 Dec 2024</p>
-      <p>Venue: Biswabangla swaroni</p>
+        <h1>27Th International Conference on Pattern Recognition Dec 2024</h1>
+        <p>Date: 01-05 December 2024</p>
+        <p>Venue: Biswabangla Swaroni, Kolkata, India</p>
     </header>
     <div class="container">
-      <h2>Select Registration Fee :-</h2>
-      <div class="feeContainer">
-        <label class="label" for="ticketType">Ticket Type: </label>
-        <select id="ticketType" onchange="updateSelect2Options()">
-          <option value="default">Select an option</option>
-          <option value="IAPR">IAPR Member</option>
-          <option value="General">General</option>
-          <option value="Student">Student(including Gala Dinner)</option>
-          <option value="non Student">Tutorial fees for non student</option>
-          <option value="Tutorial fees Student">Tutorial fees for student</option>
-          <option value="Workshop">Workshop fees for non student</option>
-          <option value="workshopStudent">Workshop fees for student</option>
-        </select>
+        <h2 class="text">-: Select Registration Fee :-</h2>
+        <div class="feeContainer">
+            <label class="label" for="ticketType">Ticket Type: </label>
+            <select id="ticketType" onchange="updateSelect2Options()">
+                <option value="default">Select an option</option>
+                <option value="IAPR">IAPR Member</option>
+                <option value="General">General</option>
+                <option value="Student">Student(including Gala Dinner)</option>
+                <option value="non Student">Tutorial fees for non student</option>
+                <option value="Tutorial fees Student">Tutorial fees for student</option>
+                <option value="Workshop">Workshop fees for non student</option>
+                <option value="workshopStudent">Workshop fees for student</option>
+            </select>
 
-        <label class="label" for="fee">Fee</label>
-        <select id="fee"></select>
-      </div>
-      <div>
-        <p>Quantity:</p>
-        <input type="number" id="quantity" min="1" value="1" />
-      </div>
-      <section class="galaDinnerSection">
-        <h3>Add Gala Dinner worth $100</h3>
-        <p>Quantity:</p>
-        <input id="galaDinner" type="number" min="0" value="0" />
-      </section>
+            <label class="label" for="fee">Fee</label>
+            <select id="fee">
 
-      <section class="totalPrice">
-        <h2>Total Price:</h2>
-        <p id="totalPrice">$00</p>
-      </section>
-      <button id="purchaseButton">Purchase</button>
+            </select>
+        </div>
+        <div>
+            <label>Quantity:</label>
+            <input type="number" id="quantity" min="1" value="1" />
+        </div>
+        <section class="galaDinnerSection">
+            <label class="gala">Add Gala Dinner worth $100</label>
+            <input type="checkbox" id="galaCheckbox">
+            <div id="galaDetails" style="display: none; ">
+                <label>Quantity:</lable>
+                <input id="galaDinner" type="number" min="0" value="0">
+            </div>
+        </section>
+        <section class="TotalPrice">
+            <h2> Total Price : </h2>
+            <p id="totalPrice">$00</p>
+        </section>
+        <div class="btn">
+        <button id="purchaseButton">Purchase</button>
+        </div>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
 
 
@@ -72,3 +82,49 @@
 
         </select>
     </div> 
+
+
+
+
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Login Form</h1>
+    </header>
+    <div class="container">
+        <form id="loginForm">
+            <section class="galaDinnerSection">
+                <label class="gala">Add Gala Dinner worth $100</label> 
+                <input type="checkbox" id="galaCheckbox">
+                <div id="galaDetails" style="display: none;">
+                    <p>Quantity:</p>
+                    <input id="galaDinner" type="number" min="0" value="0">
+                </div>
+            </section>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        const galaCheckbox = document.getElementById('galaCheckbox');
+        const galaDetails = document.getElementById('galaDetails');
+
+        galaCheckbox.addEventListener('change', function () {
+            if (galaCheckbox.checked) {
+                galaDetails.style.display = 'block';
+            } else {
+                galaDetails.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

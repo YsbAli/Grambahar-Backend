@@ -78,6 +78,24 @@ function updateTotalPrice() {
 
 }
 
+
+
+// Check Box
+
+
+const galaCheckbox = document.getElementById('galaCheckbox');
+const galaDetails = document.getElementById('galaDetails');
+
+galaCheckbox.addEventListener('change', function () {
+    if (galaCheckbox.checked) {
+        galaDetails.style.display = 'block';
+    } else {
+        galaDetails.style.display = 'none';
+    }
+});
+
+
+
 // Add an event listener for changes in ticket type and quantity
 ticketType.addEventListener('change', updateTotalPrice);
 quantity.addEventListener('input', updateTotalPrice);
